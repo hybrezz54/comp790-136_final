@@ -4,12 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="16dp"
+    android:layout_margin="10dp"
     tools:context=".GameActivity">
+
+    <Chronometer
+        android:id="@+id/stopwatch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_margin="6dp"
+        android:layout_alignParentStart="true"/>
+
+    <ImageButton
+        android:id="@+id/btnExit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:layout_alignParentEnd="true"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_baseline_close_36"
+        android:tint="#AE243B"
+        android:onClick="onExit" />
 
     <GridLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/btnExit"
         android:layout_centerInParent="true"
         android:columnCount="4"
         android:columnOrderPreserved="true"
@@ -29,7 +49,8 @@
                 android:layout_weight="2"
                 android:scaleType="fitCenter"
                 android:adjustViewBounds="true"
-                android:background="@drawable/image_border" />
+                android:background="@drawable/image_border"
+                android:onClick="onBoxClick" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -53,7 +74,8 @@
                 android:layout_weight="2"
                 android:scaleType="fitCenter"
                 android:adjustViewBounds="true"
-                android:background="@drawable/image_border" />
+                android:background="@drawable/image_border"
+                android:onClick="onBoxClick" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -78,7 +100,8 @@
                 android:layout_weight="2"
                 android:scaleType="fitCenter"
                 android:adjustViewBounds="true"
-                android:background="@drawable/image_border" />
+                android:background="@drawable/image_border"
+                android:onClick="onBoxClick" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -103,7 +126,8 @@
                 android:layout_weight="2"
                 android:scaleType="fitCenter"
                 android:adjustViewBounds="true"
-                android:background="@drawable/image_border" />
+                android:background="@drawable/image_border"
+                android:onClick="onBoxClick" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -128,7 +152,8 @@
                 android:layout_weight="2"
                 android:scaleType="fitCenter"
                 android:adjustViewBounds="true"
-                android:background="@drawable/image_border" />
+                android:background="@drawable/image_border"
+                android:onClick="onBoxClick" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -152,7 +177,8 @@
                 android:layout_weight="2"
                 android:scaleType="fitCenter"
                 android:adjustViewBounds="true"
-                android:background="@drawable/image_border" />
+                android:background="@drawable/image_border"
+                android:onClick="onBoxClick" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -177,7 +203,8 @@
                 android:layout_weight="2"
                 android:scaleType="fitCenter"
                 android:adjustViewBounds="true"
-                android:background="@drawable/image_border" />
+                android:background="@drawable/image_border"
+                android:onClick="onBoxClick" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -202,7 +229,8 @@
                 android:layout_weight="2"
                 android:scaleType="fitCenter"
                 android:adjustViewBounds="true"
-                android:background="@drawable/image_border" />
+                android:background="@drawable/image_border"
+                android:onClick="onBoxClick" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -227,7 +255,8 @@
                 android:layout_weight="2"
                 android:scaleType="fitCenter"
                 android:adjustViewBounds="true"
-                android:background="@drawable/image_border" />
+                android:background="@drawable/image_border"
+                android:onClick="onBoxClick" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -252,7 +281,8 @@
                 android:layout_weight="2"
                 android:scaleType="fitCenter"
                 android:adjustViewBounds="true"
-                android:background="@drawable/image_border" />
+                android:background="@drawable/image_border"
+                android:onClick="onBoxClick" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -277,7 +307,8 @@
                 android:layout_weight="2"
                 android:scaleType="fitCenter"
                 android:adjustViewBounds="true"
-                android:background="@drawable/image_border" />
+                android:background="@drawable/image_border"
+                android:onClick="onBoxClick" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -302,7 +333,8 @@
                 android:layout_weight="2"
                 android:scaleType="fitCenter"
                 android:adjustViewBounds="true"
-                android:background="@drawable/image_border" />
+                android:background="@drawable/image_border"
+                android:onClick="onBoxClick" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -327,7 +359,8 @@
                 android:layout_weight="2"
                 android:scaleType="fitCenter"
                 android:adjustViewBounds="true"
-                android:background="@drawable/image_border" />
+                android:background="@drawable/image_border"
+                android:onClick="onBoxClick" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -352,7 +385,8 @@
                 android:layout_weight="2"
                 android:scaleType="fitCenter"
                 android:adjustViewBounds="true"
-                android:background="@drawable/image_border" />
+                android:background="@drawable/image_border"
+                android:onClick="onBoxClick" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -377,7 +411,8 @@
                 android:layout_weight="2"
                 android:scaleType="fitCenter"
                 android:adjustViewBounds="true"
-                android:background="@drawable/image_border" />
+                android:background="@drawable/image_border"
+                android:onClick="onBoxClick" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -402,7 +437,8 @@
                 android:layout_weight="2"
                 android:scaleType="fitCenter"
                 android:adjustViewBounds="true"
-                android:background="@drawable/image_border" />
+                android:background="@drawable/image_border"
+                android:onClick="onBoxClick" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -427,7 +463,8 @@
                 android:layout_weight="2"
                 android:scaleType="fitCenter"
                 android:adjustViewBounds="true"
-                android:background="@drawable/image_border" />
+                android:background="@drawable/image_border"
+                android:onClick="onBoxClick" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -452,7 +489,8 @@
                 android:layout_weight="2"
                 android:scaleType="fitCenter"
                 android:adjustViewBounds="true"
-                android:background="@drawable/image_border" />
+                android:background="@drawable/image_border"
+                android:onClick="onBoxClick" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -477,7 +515,8 @@
                 android:layout_weight="2"
                 android:scaleType="fitCenter"
                 android:adjustViewBounds="true"
-                android:background="@drawable/image_border" />
+                android:background="@drawable/image_border"
+                android:onClick="onBoxClick" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -502,7 +541,8 @@
                 android:layout_weight="2"
                 android:scaleType="fitCenter"
                 android:adjustViewBounds="true"
-                android:background="@drawable/image_border" />
+                android:background="@drawable/image_border"
+                android:onClick="onBoxClick" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -527,7 +567,8 @@
                 android:layout_weight="2"
                 android:scaleType="fitCenter"
                 android:adjustViewBounds="true"
-                android:background="@drawable/image_border" />
+                android:background="@drawable/image_border"
+                android:onClick="onBoxClick" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -552,7 +593,8 @@
                 android:layout_weight="2"
                 android:scaleType="fitCenter"
                 android:adjustViewBounds="true"
-                android:background="@drawable/image_border" />
+                android:background="@drawable/image_border"
+                android:onClick="onBoxClick" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -577,7 +619,8 @@
                 android:layout_weight="2"
                 android:scaleType="fitCenter"
                 android:adjustViewBounds="true"
-                android:background="@drawable/image_border" />
+                android:background="@drawable/image_border"
+                android:onClick="onBoxClick" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -602,7 +645,8 @@
                 android:layout_weight="2"
                 android:scaleType="fitCenter"
                 android:adjustViewBounds="true"
-                android:background="@drawable/image_border" />
+                android:background="@drawable/image_border"
+                android:onClick="onBoxClick" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -627,7 +671,8 @@
                 android:layout_weight="2"
                 android:scaleType="fitCenter"
                 android:adjustViewBounds="true"
-                android:background="@drawable/image_border" />
+                android:background="@drawable/image_border"
+                android:onClick="onBoxClick" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -652,7 +697,8 @@
                 android:layout_weight="2"
                 android:scaleType="fitCenter"
                 android:adjustViewBounds="true"
-                android:background="@drawable/image_border" />
+                android:background="@drawable/image_border"
+                android:onClick="onBoxClick" />
 
             <TextView
                 android:layout_width="match_parent"
