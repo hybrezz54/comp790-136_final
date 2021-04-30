@@ -26,691 +26,697 @@
         android:tint="#AE243B"
         android:onClick="onExit" />
 
-    <GridLayout
+    <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/btnExit"
-        android:layout_centerInParent="true"
-        android:columnCount="4"
-        android:columnOrderPreserved="true"
-        android:rowCount="7"
-        android:rowOrderPreserved="true"
-        android:useDefaultMargins="true">
+        android:layout_centerInParent="true">
 
-        <LinearLayout
+        <GridLayout
             android:layout_width="wrap_content"
-            android:layout_height="65dp"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/boxA"
-                android:layout_width="65dp"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                android:background="@drawable/image_border"
-                android:onClick="onBoxClick" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="A"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="65dp"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/boxB"
-                android:layout_width="65dp"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                android:background="@drawable/image_border"
-                android:onClick="onBoxClick" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="B"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="65dp"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/boxC"
-                android:layout_width="65dp"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                android:background="@drawable/image_border"
-                android:onClick="onBoxClick" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="C"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="65dp"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/boxD"
-                android:layout_width="65dp"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                android:background="@drawable/image_border"
-                android:onClick="onBoxClick" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="D"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="65dp"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/boxE"
-                android:layout_width="65dp"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                android:background="@drawable/image_border"
-                android:onClick="onBoxClick" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="E"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="65dp"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/boxF"
-                android:layout_width="65dp"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                android:background="@drawable/image_border"
-                android:onClick="onBoxClick" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="F"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="65dp"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/boxG"
-                android:layout_width="65dp"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                android:background="@drawable/image_border"
-                android:onClick="onBoxClick" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="G"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="65dp"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/boxH"
-                android:layout_width="65dp"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                android:background="@drawable/image_border"
-                android:onClick="onBoxClick" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="H"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="65dp"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/boxI"
-                android:layout_width="65dp"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                android:background="@drawable/image_border"
-                android:onClick="onBoxClick" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="I"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="65dp"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/boxJ"
-                android:layout_width="65dp"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                android:background="@drawable/image_border"
-                android:onClick="onBoxClick" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="J"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="65dp"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/boxK"
-                android:layout_width="65dp"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                android:background="@drawable/image_border"
-                android:onClick="onBoxClick" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="K"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="65dp"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/boxL"
-                android:layout_width="65dp"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                android:background="@drawable/image_border"
-                android:onClick="onBoxClick" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="L"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="65dp"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/boxM"
-                android:layout_width="65dp"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                android:background="@drawable/image_border"
-                android:onClick="onBoxClick" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="M"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="65dp"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/boxN"
-                android:layout_width="65dp"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                android:background="@drawable/image_border"
-                android:onClick="onBoxClick" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="N"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="65dp"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/boxO"
-                android:layout_width="65dp"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                android:background="@drawable/image_border"
-                android:onClick="onBoxClick" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="O"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="65dp"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/boxP"
-                android:layout_width="65dp"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                android:background="@drawable/image_border"
-                android:onClick="onBoxClick" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="P"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="65dp"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/boxQ"
-                android:layout_width="65dp"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                android:background="@drawable/image_border"
-                android:onClick="onBoxClick" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Q"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="65dp"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/boxR"
-                android:layout_width="65dp"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                android:background="@drawable/image_border"
-                android:onClick="onBoxClick" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="R"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="65dp"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/boxS"
-                android:layout_width="65dp"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                android:background="@drawable/image_border"
-                android:onClick="onBoxClick" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="S"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="65dp"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/boxT"
-                android:layout_width="65dp"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                android:background="@drawable/image_border"
-                android:onClick="onBoxClick" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="T"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="65dp"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/boxU"
-                android:layout_width="65dp"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                android:background="@drawable/image_border"
-                android:onClick="onBoxClick" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="U"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="65dp"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/boxV"
-                android:layout_width="65dp"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                android:background="@drawable/image_border"
-                android:onClick="onBoxClick" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="V"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="65dp"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/boxW"
-                android:layout_width="65dp"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                android:background="@drawable/image_border"
-                android:onClick="onBoxClick" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="W"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="65dp"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/boxX"
-                android:layout_width="65dp"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                android:background="@drawable/image_border"
-                android:onClick="onBoxClick" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="X"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="65dp"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/boxY"
-                android:layout_width="65dp"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                android:background="@drawable/image_border"
-                android:onClick="onBoxClick" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Y"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="65dp"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/boxZ"
-                android:layout_width="65dp"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                android:background="@drawable/image_border"
-                android:onClick="onBoxClick" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Z"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-    </GridLayout>
+            android:layout_height="wrap_content"
+            android:columnCount="4"
+            android:columnOrderPreserved="true"
+            android:rowCount="7"
+            android:rowOrderPreserved="true"
+            android:useDefaultMargins="true">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="85dp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/boxA"
+                    android:layout_width="65dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/image_border"
+                    android:onClick="onBoxClick" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="A"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="85dp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/boxB"
+                    android:layout_width="65dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/image_border"
+                    android:onClick="onBoxClick" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="B"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="85dp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/boxC"
+                    android:layout_width="65dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/image_border"
+                    android:onClick="onBoxClick" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="C"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="85dp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/boxD"
+                    android:layout_width="65dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/image_border"
+                    android:onClick="onBoxClick" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="D"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="85dp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/boxE"
+                    android:layout_width="65dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/image_border"
+                    android:onClick="onBoxClick" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="E"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="85dp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/boxF"
+                    android:layout_width="65dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/image_border"
+                    android:onClick="onBoxClick" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="F"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="85dp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/boxG"
+                    android:layout_width="65dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/image_border"
+                    android:onClick="onBoxClick" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="G"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="85dp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/boxH"
+                    android:layout_width="65dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/image_border"
+                    android:onClick="onBoxClick" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="H"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="85dp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/boxI"
+                    android:layout_width="65dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/image_border"
+                    android:onClick="onBoxClick" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="I"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="85dp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/boxJ"
+                    android:layout_width="65dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/image_border"
+                    android:onClick="onBoxClick" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="J"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="85dp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/boxK"
+                    android:layout_width="65dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/image_border"
+                    android:onClick="onBoxClick" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="K"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="85dp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/boxL"
+                    android:layout_width="65dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/image_border"
+                    android:onClick="onBoxClick" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="L"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="85dp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/boxM"
+                    android:layout_width="65dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/image_border"
+                    android:onClick="onBoxClick" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="M"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="85dp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/boxN"
+                    android:layout_width="65dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/image_border"
+                    android:onClick="onBoxClick" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="N"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="85dp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/boxO"
+                    android:layout_width="65dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/image_border"
+                    android:onClick="onBoxClick" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="O"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="85dp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/boxP"
+                    android:layout_width="65dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/image_border"
+                    android:onClick="onBoxClick" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="P"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="85dp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/boxQ"
+                    android:layout_width="65dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/image_border"
+                    android:onClick="onBoxClick" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Q"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="85dp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/boxR"
+                    android:layout_width="65dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/image_border"
+                    android:onClick="onBoxClick" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="R"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="85dp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/boxS"
+                    android:layout_width="65dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/image_border"
+                    android:onClick="onBoxClick" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="S"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="85dp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/boxT"
+                    android:layout_width="65dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/image_border"
+                    android:onClick="onBoxClick" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="T"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="85dp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/boxU"
+                    android:layout_width="65dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/image_border"
+                    android:onClick="onBoxClick" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="U"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="85dp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/boxV"
+                    android:layout_width="65dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/image_border"
+                    android:onClick="onBoxClick" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="V"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="85dp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/boxW"
+                    android:layout_width="65dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/image_border"
+                    android:onClick="onBoxClick" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="W"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="85dp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/boxX"
+                    android:layout_width="65dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/image_border"
+                    android:onClick="onBoxClick" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="X"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="85dp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/boxY"
+                    android:layout_width="65dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/image_border"
+                    android:onClick="onBoxClick" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Y"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="85dp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/boxZ"
+                    android:layout_width="65dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/image_border"
+                    android:onClick="onBoxClick" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Z"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </GridLayout>
+
+    </ScrollView>
 
 </RelativeLayout>
