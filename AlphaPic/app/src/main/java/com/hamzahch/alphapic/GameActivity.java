@@ -11,8 +11,10 @@ import android.provider.MediaStore;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Chronometer;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import org.tensorflow.lite.support.image.TensorImage;
 import org.tensorflow.lite.task.core.vision.ImageProcessingOptions;
@@ -133,14 +135,36 @@ public class GameActivity extends Activity {
                 }
 
                 br.close();
-                Log.e("FINAL", TextUtils.join(";", labels));
+                Log.d("FINAL", TextUtils.join(";", labels));
+
+                TextView textView = null;
+                ViewGroup row = (ViewGroup) mCurrBox.getParent();
+                for (int itemPos = 0; itemPos < row.getChildCount(); itemPos++) {
+                    View view = row.getChildAt(itemPos);
+                    if (view instanceof TextView) {
+                        textView = (TextView) view; //Found it!
+                        break;
+                    }
+                }
+
+                // determine if round won or lost
+                String letter = textView.getText().toString().toLowerCase();
+                long c = labels.stream().filter(l -> l.startsWith(letter)).count();
+                if (c > 0L) {
+                    // win
+                    mCurrBox.setBackgroundResource(R.drawable.image_border_correct);
+                    mPlayer = MediaPlayer.create(this, R.raw.correct);
+                } else {
+                    // lose
+                    mCurrBox.setBackgroundResource(R.drawable.image_border_incorrect);
+                    mPlayer = MediaPlayer.create(this, R.raw.incorrect);
+                }
+
+                mPlayer.start();
+                stopRound();
             } catch (IOException e) {
                 e.printStackTrace();
             }
-
-
-//            mCurrBox.setBackgroundResource(R.drawable.image_border_correct);
-//            stopRound();
         }
     }
 
