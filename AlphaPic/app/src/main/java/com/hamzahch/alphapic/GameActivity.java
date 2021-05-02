@@ -12,6 +12,8 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Chronometer;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -160,6 +162,8 @@ public class GameActivity extends Activity {
                     mPlayer = MediaPlayer.create(this, R.raw.incorrect);
                 }
 
+                final Animation anim = AnimationUtils.loadAnimation(this, R.anim.scale);
+                mCurrBox.startAnimation(anim);
                 mPlayer.start();
                 stopRound();
             } catch (IOException e) {

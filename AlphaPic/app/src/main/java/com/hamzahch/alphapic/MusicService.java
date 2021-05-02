@@ -21,7 +21,7 @@ public class MusicService extends Service {
         super.onCreate();
         mPlayer = MediaPlayer.create(this, R.raw.bg);
         mPlayer.setLooping(true);
-        mPlayer.setVolume(40, 40);
+        mPlayer.setVolume(0.75f, 0.75f);
     }
 
     @Override
