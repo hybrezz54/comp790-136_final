@@ -45,7 +45,9 @@ import static java.lang.Math.min;
 
 public class GameActivity extends Activity {
 
+    // constants for cheating mechanism
     static final float CHANGE_THRESHOLD = 0.2f;
+    static final int ROUND_THRESHOLD = 10;
 
     private List<Integer> imgResources;
     private List<Integer> soundResources;
@@ -258,7 +260,7 @@ public class GameActivity extends Activity {
 
         // check for cheating
         float percentChange = Math.abs((elapsedMillis - avg) / avg);
-        if (n >= 10 && percentChange >= CHANGE_THRESHOLD) {
+        if (n >= ROUND_THRESHOLD && percentChange >= CHANGE_THRESHOLD) {
             Toast.makeText(this, getString(R.string.msg_cheating), Toast.LENGTH_LONG)
                     .show();
         }
