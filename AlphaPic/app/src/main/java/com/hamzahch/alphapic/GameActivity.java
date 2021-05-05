@@ -8,6 +8,7 @@ import android.graphics.Bitmap;
 import android.graphics.Rect;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.SystemClock;
 import android.provider.MediaStore;
 import android.text.TextUtils;
@@ -19,6 +20,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.Chronometer;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.tensorflow.lite.support.image.TensorImage;
 import org.tensorflow.lite.task.core.vision.ImageProcessingOptions;
@@ -27,11 +29,15 @@ import org.tensorflow.lite.task.vision.classifier.ImageClassifier;
 import org.tensorflow.lite.task.vision.classifier.ImageClassifier.ImageClassifierOptions;
 
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Date;
 import java.util.List;
 import java.util.Random;
 
@@ -154,6 +160,7 @@ public class GameActivity extends Activity {
                 // determine if round won or lost
                 String letter = textView.getText().toString().toLowerCase();
                 long c = labels.stream().filter(l -> l.startsWith(letter)).count();
+                mPlayer.release();
                 if (c > 0L) {
                     // win
                     mCurrBox.setBackgroundResource(R.drawable.image_border_correct);
@@ -164,12 +171,19 @@ public class GameActivity extends Activity {
                     mPlayer = MediaPlayer.create(this, R.raw.incorrect);
                 }
 
+                // save image to file
+                int elapsedMillis = (int) (SystemClock.elapsedRealtime() - mTimer.getBase());
+                FileOutputStream out = new FileOutputStream(getImageFile(letter, elapsedMillis));
+                img.compress(Bitmap.CompressFormat.JPEG, 100, out);
+
                 // start sounds and animation
                 final Animation anim = AnimationUtils.loadAnimation(this, R.anim.scale);
                 mCurrBox.startAnimation(anim);
                 mPlayer.start();
-                stopRound(letter);
+                stopRound(letter, elapsedMillis);
             } catch (IOException e) {
+                Toast.makeText(this, "An error occured. Please try again.",
+                        Toast.LENGTH_SHORT).show();
                 e.printStackTrace();
             }
         }
@@ -197,6 +211,7 @@ public class GameActivity extends Activity {
     public void startRound() {
         // check if boxes filled
         if (imgResources.size() < 1) {
+            mPlayer.release();
             mPlayer = MediaPlayer.create(this, R.raw.end);
             mPlayer.start();
             return;
@@ -214,15 +229,15 @@ public class GameActivity extends Activity {
         mCurrBox.setClickable(true);
 
         // play appropriate sound
+        if (mPlayer != null) mPlayer.release();
         mPlayer = MediaPlayer.create(this, soundResources.get(box));
         soundResources.remove(box);
         mPlayer.start();
     }
 
-    public void stopRound(String letter) {
+    public void stopRound(String letter, int elapsedMillis) {
         // reset and save time
         mTimer.stop();
-        int elapsedMillis = (int) (SystemClock.elapsedRealtime() - mTimer.getBase());
         saveHistory(letter, elapsedMillis);
         mTimer.setBase(SystemClock.elapsedRealtime());
 
@@ -244,6 +259,14 @@ public class GameActivity extends Activity {
         editor.putInt(letter + "_n", n + 1);
         editor.putInt(letter + "_avgtime", newAvg);
         editor.apply();
+    }
+
+    private File getImageFile(String letter, int elapsedMillis) throws IOException {
+        String timeStamp = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date());
+        String pictureFile = letter + "_" + elapsedMillis + "_" + timeStamp;
+        File storageDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
+        File file = File.createTempFile(pictureFile,".jpg", storageDir);
+        return file;
     }
 
 }
