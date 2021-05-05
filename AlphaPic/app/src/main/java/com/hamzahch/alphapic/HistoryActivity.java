@@ -2,8 +2,8 @@ package com.hamzahch.alphapic;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -25,6 +25,7 @@ public class HistoryActivity extends Activity {
 
     private BarChart mChart;
     private ListView mListView;
+    private ArrayList<String> letters;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +37,7 @@ public class HistoryActivity extends Activity {
         mListView = findViewById(R.id.listView);
 
         // init vars
-        ArrayList<String> letters = new ArrayList(Arrays.asList("a", "b", "c", "d", "e", "f",
+        letters = new ArrayList(Arrays.asList("a", "b", "c", "d", "e", "f",
                 "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u",
                 "v", "w", "x", "y", "z"));
         ArrayList<BarEntry> entries = new ArrayList<>();
@@ -75,6 +76,12 @@ public class HistoryActivity extends Activity {
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1,
                 letters);
         mListView.setAdapter(adapter);
+        mListView.setOnItemClickListener((parent, view, position, id) -> {
+            String letter = letters.get(position);
+            Intent i = new Intent(this, PhotoActivity.class);
+            i.putExtra(getString(R.string.extra_letter_key), letter);
+            startActivity(i);
+        });
     }
 
     public void onExit(View view) {

@@ -264,8 +264,8 @@ public class GameActivity extends Activity {
     private File getImageFile(String letter, int elapsedMillis) throws IOException {
         String timeStamp = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date());
         String pictureFile = letter + "_" + elapsedMillis + "_" + timeStamp;
-        File storageDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
-        File file = File.createTempFile(pictureFile,".jpg", storageDir);
+        File dir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
+        File file = File.createTempFile(pictureFile,".jpg", dir);
         return file;
     }
 
