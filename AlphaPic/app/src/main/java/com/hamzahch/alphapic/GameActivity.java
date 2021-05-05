@@ -1,7 +1,9 @@
 package com.hamzahch.alphapic;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.Rect;
 import android.media.MediaPlayer;
@@ -162,10 +164,11 @@ public class GameActivity extends Activity {
                     mPlayer = MediaPlayer.create(this, R.raw.incorrect);
                 }
 
+                // start sounds and animation
                 final Animation anim = AnimationUtils.loadAnimation(this, R.anim.scale);
                 mCurrBox.startAnimation(anim);
                 mPlayer.start();
-                stopRound();
+                stopRound(letter);
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -216,12 +219,31 @@ public class GameActivity extends Activity {
         mPlayer.start();
     }
 
-    public void stopRound() {
-        // reset
-        mTimer.setBase(SystemClock.elapsedRealtime());
+    public void stopRound(String letter) {
+        // reset and save time
         mTimer.stop();
+        int elapsedMillis = (int) (SystemClock.elapsedRealtime() - mTimer.getBase());
+        saveHistory(letter, elapsedMillis);
+        mTimer.setBase(SystemClock.elapsedRealtime());
+
+        // start new time
         mCurrBox.setClickable(false);
         startRound();
+    }
+
+    private void saveHistory(String letter, int elapsedMillis) {
+        // read existing values
+        SharedPreferences prefs = getSharedPreferences(getString(R.string.prefs_file_key),
+                Context.MODE_PRIVATE);
+        int n = prefs.getInt(letter + "_n", 0);
+        int avg = prefs.getInt(letter + "_avgtime", 0);
+        int newAvg = ((avg * n) + elapsedMillis) / (n + 1);
+
+        // write updated values
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putInt(letter + "_n", n + 1);
+        editor.putInt(letter + "_avgtime", newAvg);
+        editor.apply();
     }
 
 }

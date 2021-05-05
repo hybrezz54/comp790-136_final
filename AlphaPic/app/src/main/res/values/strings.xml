@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">AlphaPic</string>
     <string name="title_activity_game">Game</string>
-    <string name="title_activity_history">Hisotry</string>
+    <string name="title_activity_history">History</string>
+    <string name="prefs_file_key">game_history</string>
+    <string name="chartTitle">Avg Seconds to Take Photo Per Letter</string>
 </resources>
