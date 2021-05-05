@@ -6,4 +6,5 @@
     <string name="chartTitle">Avg Seconds to Take Photo Per Letter</string>
     <string name="title_activity_photo">PhotoActivity</string>
     <string name="extra_letter_key">EXTRA_LETTER</string>
+    <string name="msg_cheating">Are you cheating? Try taking a photo of an actual object!</string>
 </resources>

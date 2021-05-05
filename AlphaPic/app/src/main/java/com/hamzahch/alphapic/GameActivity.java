@@ -45,6 +45,8 @@ import static java.lang.Math.min;
 
 public class GameActivity extends Activity {
 
+    static final float CHANGE_THRESHOLD = 0.2f;
+
     private List<Integer> imgResources;
     private List<Integer> soundResources;
     private MediaPlayer mPlayer;
@@ -253,6 +255,13 @@ public class GameActivity extends Activity {
         int n = prefs.getInt(letter + "_n", 0);
         int avg = prefs.getInt(letter + "_avgtime", 0);
         int newAvg = ((avg * n) + elapsedMillis) / (n + 1);
+
+        // check for cheating
+        float percentChange = Math.abs((elapsedMillis - avg) / avg);
+        if (n >= 10 && percentChange >= CHANGE_THRESHOLD) {
+            Toast.makeText(this, getString(R.string.msg_cheating), Toast.LENGTH_LONG)
+                    .show();
+        }
 
         // write updated values
         SharedPreferences.Editor editor = prefs.edit();
